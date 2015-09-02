@@ -11,7 +11,7 @@ There are 5 general steps required to retrieve data:
 
 ### Example
 
-```
+```java
 public class Test extends JFrame implements JSONDownloader.onDownloadListener {
     ...
     // Step 1
