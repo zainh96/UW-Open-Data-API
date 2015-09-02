@@ -7,7 +7,8 @@ The Library uses [org.json](http://www.json.org/java/) to parse JSON results. It
 to work. A download to the version used in this library can be found [here](https://code.google.com/p/org-json-java/downloads/list).
 
 ## Quick Start
-Take a look at the core classes which are found [here](/Core). There you will find an overview, and and example.
+Take a look at the core classes which are found [here](/Core). There you will find an overview, and examples for 
+using one or more url at a time.
 
 # Current Supported Endpoints
 ## Server
