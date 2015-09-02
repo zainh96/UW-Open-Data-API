@@ -51,15 +51,7 @@ public class Test extends JFrame implements JSONDownloader.onDownloadListener {
         parser.parseJSON();
         
         // Step 5
-        ArrayList<UWBuilding> buildings = parser.getUwBuildings();
-        for(UWBuilding building : buildings) {
-            System.out.println("Building id = " + building.getBuildingId());
-            System.out.println("Building code = " + building.getBuildingCode());
-            System.out.println("Building name = " + building.getBuildingName());
-            System.out.println("latitude = " + building.getLatitude());
-            System.out.println("longitude = " + building.getLatitude());
-            System.out.println("\n");
-        }
+        ArrayList<UWClass> classes = parser.getUwClasses();
     }
 }
 ```
