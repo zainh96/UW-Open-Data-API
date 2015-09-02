@@ -29,6 +29,7 @@ public class Test extends JFrame implements JSONDownloader.onDownloadListener {
         // Step 3
         JSONDownloader downloader = new JSONDownloader(url); // you can give any number of arguments, or a String array
         downloader.setOnDownloadListener(this);
+        downloader.start(); // starts the download in a seperate thread
     }
     
     ...
