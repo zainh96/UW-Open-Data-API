@@ -22,7 +22,7 @@ The table below shows which parse types correspond to which end point, and gette
 | `getDatetime()`  | String | returns ISO8601 compatible current server timestamp |
 | `getTimezone()` | String | returns server timezone |
 | `getKey_reset_time()` | int | returns UNIX timestamp of when the api call quota will reset |
-| `getErrorCodes()` | ArrayList<ServerErrorCode> | returns a list of Server error codes, each wrapped as a ServerErrorCode|
+| `getErrorCodes()` | ArrayList of Type `ServerErrorCode` | returns a list of Server error codes, each wrapped as a ServerErrorCode|
 
 ## Public Setter Methods
 | Method Name  | Parameters | Description |
