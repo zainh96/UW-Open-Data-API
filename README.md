@@ -20,4 +20,11 @@ to work. A download to the version used in this library can be found [here](http
 
 ## Building
 * [/builings/list](/Building)
+* [/builings/{building_code}](/Building)
+* [/builings/{building}/{room}/courses](/Building)
 
+# Obtaining a Key
+You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
+
+# Official API
+The official UW Open Data API is located [here](https://github.com/uWaterloo/api-documentation). 
