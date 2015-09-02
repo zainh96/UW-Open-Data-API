@@ -1,3 +1,8 @@
+package Server;
+import Core.APIResult;
+import Core.MetaData;
+import Core.MetaDataParser;
+import Core.UWParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

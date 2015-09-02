@@ -1,8 +1,6 @@
+package API;
 import java.util.ArrayList;
 
-/**
- * Created by ZainH on 01/09/2015.
- */
 public class APIChangeLog {
     private String date = null;
     private ArrayList<String> changes = new ArrayList<>();

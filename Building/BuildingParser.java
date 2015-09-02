@@ -1,7 +1,12 @@
+package Building;
+import Core.APIResult;
+import Core.MetaData;
+import Core.MetaDataParser;
+import Core.UWParser;
+import Course.UWClass;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 /**
