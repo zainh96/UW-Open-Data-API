@@ -6,6 +6,9 @@ parses the reuslts, and wraps them into pretty Java objects for you to use.
 The Library uses [org.json](http://www.json.org/java/) to parse JSON results. It must be included in your project for the library
 to work. A download to the version used in this library can be found [here](https://code.google.com/p/org-json-java/downloads/list).
 
+## Quick Start
+Take a look at the core classes which are found [here](/Core). There you will find an overview, and and example.
+
 # Current Supported Endpoints
 ## Server
 * [/server/time](/Server)
