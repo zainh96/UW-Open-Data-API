@@ -35,7 +35,7 @@ The table below shows which parse types correspond to which end point, and gette
 | ------------- | ------------- | ------------- |
 |`parseJSON()`| parses the JSON data in it's given APIResult |
 
-# ServerErroCode.java
+# ServerErrorCode.java
 The java wrapper for server error codes for the /server/codes endpoint.
 
 ## Public Getter Methods
