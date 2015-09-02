@@ -23,6 +23,19 @@ to work. A download to the version used in this library can be found [here](http
 * [/builings/{building_code}](/Building)
 * [/builings/{building}/{room}/courses](/Building)
 
+## Codes
+* [/codes/units/](/Codes)
+* [/codes/terms](/Codes)
+* [/codes/groups](/Codes)
+* [/codes/subjects](/Codes)
+* [/codes/instructions](/Codes)
+
+## Resources
+* [/resources/tutors](/Resources)
+* [/resources/printers](/Resources)
+* [/resources/infosessions](/Resources)
+* [/resources/goosewatch](/Resources)
+
 # Obtaining a Key
 You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
 
