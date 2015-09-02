@@ -34,12 +34,3 @@ The table below shows which parse types correspond to which end point, and gette
 | Method Name  | Description |
 | ------------- | ------------- | ------------- |
 |`parseJSON()`| parses the JSON data in it's given APIResult |
-
-# ServerErrorCode.java
-The java wrapper for server error codes for the /server/codes endpoint.
-
-## Public Getter Methods
-| Method Name  | Return Type | Description |
-| ------------- | ------------- | ------------- |
-| `getMessage()`| String | returns the message associated with the code|
-| `getCode()`  | int | returns error code number |
