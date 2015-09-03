@@ -30,3 +30,14 @@ The table below shows which parse types correspond to which end point, and gette
 |`getParseType()`|`CodesParser.ParseType`|returns the CodesParser.ParseType associated with this instance|
 |`getMeta()`|`MetaData`|returns the meta data associated with this instance's APIResult|
 |`getEndPoint()`|String|returns the required end point string for building a URL|
+
+## Public Setter Methods
+| Method Name | Parameters | Description |
+| ------------- | ------------- | ------------- |
+| `setParseType(...)`  | `APIParser.ParseType`  |sets that parse type for this instance|
+| `setAPIResult(...)`  |  `APIResult` |sets the APIResult object for this parser  |
+
+## Public Void Methods
+| Method Name  | Description |
+| ------------- | ------------- |
+| `parseJSON()`  | parses the JSON data in it's given APIResult  |
