@@ -47,7 +47,7 @@ using one or more url at a time.
 * [/terms/{term}/infosessions](/Terms)
 
 ## Weather
-* [/weather/current](https://github.com/uWaterloo/api-documentation/blob/master/v2/weather/current.md)
+* [/weather/current](/Weather)
 
 # Obtaining a Key
 You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
