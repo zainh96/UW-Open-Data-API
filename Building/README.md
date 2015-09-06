@@ -17,7 +17,7 @@ The table below shows which parse types correspond to which end point, and gette
 
 |  Method Name  | Return Type | Description |
 | ------------- | ------------- | ------------- |
-| `getUwBuildings()`  | ArrayList of type `UWBuilding`  | returns a list of builings on campus|
+| `getUwBuildings()`  | ArrayList of type `UWBuilding`  | returns a list of buildings on campus|
 |`getBuildingCodeBuilding()`|`UWBuilding`|returns a single UWBuilding for a particular {building_code}|
 |`getUwClasses()`|ArrayList of Type `UWClass`|returns a list of classes for a particular {building} and {room}|
 |`getAPIResult()`|`APIResult`|returns the APIResult object associated with this instance|
