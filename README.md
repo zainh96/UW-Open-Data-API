@@ -54,3 +54,11 @@ You need a valid API key to use this library. You can get one [here](https://api
 
 # Official API
 The official UW Open Data API is located [here](https://github.com/uWaterloo/api-documentation). 
+
+## TODO
+* Add Services end points
+* Add News end points
+* Add Events end points
+* Add Course end points
+* Add Food Service end points
+* Convert Objects to extends Parcelable for better android use
