@@ -8,12 +8,15 @@ import java.util.ArrayList;
 public class UWClass {
     private String subject = null;
     private String catalog_number = null;
-    private String units = null;
+    private double units = 0;
     private String title = null;
     private String notes = null;
     private int class_number;
     private String section = null;
     private String campus = null;
+    private int associatedClass = 0;
+    private String relatedComponent1 = null;
+    private String relatedComponent2 = null;
     private int enroll_cap;
     private int enroll_total;
     private int waiting_cap;
@@ -25,22 +28,41 @@ public class UWClass {
     private String last_updated = null;
     private int term = 0;
 
-    // date data
-    private String start_time = null;
-    private String end_time = null;
-    private String weekdays = "";
-    private String start_date = null;
-    private String end_date = null;
-    private boolean is_tba = false;
-    private boolean is_cancelled = false;
-    private boolean is_closed = false;
+    ArrayList<Reserve> reserves = new ArrayList<>();
 
-    // location data
-    private String building = null;
-    private String room = null;
+    ArrayList<ScheduleData> scheduleData = new ArrayList<>();
 
-    // instructor data
-    private ArrayList<String> instructors = new ArrayList<>();
+    public ArrayList<Reserve> getReserves() {
+        return reserves;
+    }
+
+    public int getAssociatedClass() {
+        return associatedClass;
+    }
+
+    public void setAssociatedClass(int associatedClass) {
+        this.associatedClass = associatedClass;
+    }
+
+    public String getRelatedComponent1() {
+        return relatedComponent1;
+    }
+
+    public void setRelatedComponent1(String relatedComponent1) {
+        this.relatedComponent1 = relatedComponent1;
+    }
+
+    public String getRelatedComponent2() {
+        return relatedComponent2;
+    }
+
+    public void setRelatedComponent2(String relatedComponent2) {
+        this.relatedComponent2 = relatedComponent2;
+    }
+
+    public void setReserves(ArrayList<Reserve> reserves) {
+        this.reserves = reserves;
+    }
 
     public String getSubject() {
         return subject;
@@ -58,11 +80,11 @@ public class UWClass {
         this.catalog_number = catalog_number;
     }
 
-    public String getUnits() {
+    public double getUnits() {
         return units;
     }
 
-    public void setUnits(String units) {
+    public void setUnits(double units) {
         this.units = units;
     }
 
@@ -170,91 +192,11 @@ public class UWClass {
         this.term = term;
     }
 
-    public String getStart_time() {
-        return start_time;
+    public ArrayList<ScheduleData> getScheduleData() {
+        return scheduleData;
     }
 
-    public void setStart_time(String start_time) {
-        this.start_time = start_time;
-    }
-
-    public String getEnd_time() {
-        return end_time;
-    }
-
-    public void setEnd_time(String end_time) {
-        this.end_time = end_time;
-    }
-
-    public String getWeekdays() {
-        return weekdays;
-    }
-
-    public void setWeekdays(String weekdays) {
-        this.weekdays = weekdays;
-    }
-
-    public String getStart_date() {
-        return start_date;
-    }
-
-    public void setStart_date(String start_date) {
-        this.start_date = start_date;
-    }
-
-    public String getEnd_date() {
-        return end_date;
-    }
-
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
-    }
-
-    public boolean is_tba() {
-        return is_tba;
-    }
-
-    public void setIs_tba(boolean is_tba) {
-        this.is_tba = is_tba;
-    }
-
-    public boolean is_cancelled() {
-        return is_cancelled;
-    }
-
-    public void setIs_cancelled(boolean is_cancelled) {
-        this.is_cancelled = is_cancelled;
-    }
-
-    public boolean is_closed() {
-        return is_closed;
-    }
-
-    public void setIs_closed(boolean is_closed) {
-        this.is_closed = is_closed;
-    }
-
-    public String getBuilding() {
-        return building;
-    }
-
-    public void setBuilding(String building) {
-        this.building = building;
-    }
-
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
-    }
-
-    public ArrayList<String> getInstructors() {
-        return instructors;
-    }
-
-    public void setInstructors(ArrayList<String> instructors) {
-        this.instructors = instructors;
+    public void setScheduleData(ArrayList<ScheduleData> scheduleData) {
+        this.scheduleData = scheduleData;
     }
 }
