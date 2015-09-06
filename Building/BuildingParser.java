@@ -3,6 +3,7 @@ import Core.APIResult;
 import Core.MetaData;
 import Core.MetaDataParser;
 import Core.UWParser;
+import Course.ScheduleData;
 import Course.UWClass;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -121,21 +122,21 @@ public class BuildingParser extends UWParser {
     private static final String LONGITUDE_TAG = "longitude_tag";
     private static final String SECTION_NAME_TAG = "section_name";
 
-    private final String SUBJECT_TAG = "subject";
-    private final String CATALOG_NUMBER_TAG = "catalog_number";
-    private final String TITLE_TAG = "title";
-    private final String CLASS_NUMBER_TAG = "class_number";
-    private final String SECTION_TAG = "section";
-    private final String ENROLLMENT_TOTAL_TAG = "enrollment_total";
-    private final String TERM_TAG = "term";
-    private final String LAST_UPDATED_TAG = "last_updated";
-    private final String START_TIME_TAG = "start_time";
-    private final String END_TIME_TAG = "end_time";
-    private final String WEEKDAYS_TAG = "weekdays";
-    private final String START_DATE_TAG = "start_date";
-    private final String END_DATE_TAG = "end_date";
-    private final String BUILDING_TAG = "building";
-    private final String ROOM_TAG = "room";
+    private static final String SUBJECT_TAG = "subject";
+    private static final String CATALOG_NUMBER_TAG = "catalog_number";
+    private static final String TITLE_TAG = "title";
+    private static final String CLASS_NUMBER_TAG = "class_number";
+    private static final String SECTION_TAG = "section";
+    private static final String ENROLLMENT_TOTAL_TAG = "enrollment_total";
+    private static final String TERM_TAG = "term";
+    private static final String LAST_UPDATED_TAG = "last_updated";
+    private static final String START_TIME_TAG = "start_time";
+    private static final String END_TIME_TAG = "end_time";
+    private static final String WEEKDAYS_TAG = "weekdays";
+    private static final String START_DATE_TAG = "start_date";
+    private static final String END_DATE_TAG = "end_date";
+    private static final String BUILDING_TAG = "building";
+    private static final String ROOM_TAG = "room";
 
     // JSONArray End Point Tags
     private static final String ALTERNATE_NAMES_TAG = "alternate_names";
@@ -233,20 +234,23 @@ public class BuildingParser extends UWParser {
                 if (!classObject.isNull(ENROLLMENT_TOTAL_TAG))
                     uwClass.setEnroll_total(classObject.getInt(ENROLLMENT_TOTAL_TAG));
 
+                ArrayList<ScheduleData> SDArray = new ArrayList<>();
+                ScheduleData SD = new ScheduleData();
+
                 if(!classObject.isNull(WEEKDAYS_TAG))
-                    uwClass.setWeekdays(classObject.getString(WEEKDAYS_TAG));
+                    SD.setWeekdays(classObject.getString(WEEKDAYS_TAG));
 
                 if(!classObject.isNull(START_TIME_TAG))
-                    uwClass.setStart_time(classObject.getString(START_TIME_TAG));
+                    SD.setStart_time(classObject.getString(START_TIME_TAG));
 
                 if(!classObject.isNull(END_TIME_TAG))
-                    uwClass.setEnd_time(classObject.getString(END_TIME_TAG));
+                    SD.setEnd_time(classObject.getString(END_TIME_TAG));
 
                 if(!classObject.isNull(START_DATE_TAG))
-                    uwClass.setStart_date(classObject.getString(START_DATE_TAG));
+                    SD.setStart_date(classObject.getString(START_DATE_TAG));
 
                 if(!classObject.isNull(END_DATE_TAG))
-                    uwClass.setEnd_date(classObject.getString(END_DATE_TAG));
+                    SD.setEnd_date(classObject.getString(END_DATE_TAG));
 
                 // load instructor data
                 JSONArray offeringInstructors = classObject.getJSONArray(INSTRUCTORS_TAG);
@@ -258,14 +262,17 @@ public class BuildingParser extends UWParser {
                 }
 
                 if (num_instructors > 0) {
-                    uwClass.setInstructors(instructors);
+                    SD.setInstructors(instructors);
                 }
 
                 if(!classObject.isNull(BUILDING_TAG))
-                    uwClass.setBuilding(classObject.getString(BUILDING_TAG));
+                    SD.setBuilding(classObject.getString(BUILDING_TAG));
 
                 if(!classObject.isNull(ROOM_TAG))
-                    uwClass.setRoom(classObject.getString(ROOM_TAG));
+                    SD.setRoom(classObject.getString(ROOM_TAG));
+
+                SDArray.add(SD);
+                uwClass.setScheduleData(SDArray);
 
                 if (!classObject.isNull(LAST_UPDATED_TAG))
                     uwClass.setLast_updated(classObject.getString(LAST_UPDATED_TAG));

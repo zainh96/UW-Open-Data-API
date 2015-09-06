@@ -19,7 +19,7 @@ import java.util.ArrayList;
  *    "data":[
  *      {
  *          "code": (int)
- *          "message": (String)
+ *          "message": (String)Name
  *      },
  *      ...
  *    ]
@@ -125,7 +125,7 @@ public class ServerParser extends UWParser {
         return errorCodes;
     }
 
-    public void parseTimeJSON(){
+    private void parseTimeJSON(){
         if(apiResult == null) return;
 
         try {
