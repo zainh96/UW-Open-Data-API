@@ -24,7 +24,7 @@ There are 5 general steps required to retrieve data:
     
     ...
     
-    <application
+    <application>
         ...
     </application>
 </manifest>
