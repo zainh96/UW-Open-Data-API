@@ -10,6 +10,25 @@ There are 5 general steps required to retrieve data:
 **If you gave more than one URL to the JSONDownloader constructor, you will need to differentiate each apiResult**. You can distinguish each apiResult with it's url or index (the order you gave the urls into the constructor). An Example on using more than one url at a time is given below. 
 5. You can now request data from your parsers
 
+## Android
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapp" >
+    
+    <!-- These permissions are required to download data from the UW Open Data Servers-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    
+    ...
+    
+    <application
+        ...
+    </application>
+</manifest>
+```
+
 ### Examples
 #### Single Url
 ```java
