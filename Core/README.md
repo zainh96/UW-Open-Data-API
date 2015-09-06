@@ -29,7 +29,56 @@ There are 5 general steps required to retrieve data:
     </application>
 </manifest>
 ```
+### Example in Android
+```java
+public class MyActivity extends AppCompatActivity implements JSONDownloader.onDownloadListener {
+    
+    String apiKey = null;
+    final String LOGCAT_TAG = "My Activity";
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.my_activity);
+        ...
+        // Step 1, do not redownload on screen rotation
+        if(savedInstance == null) {
+            ResourcesParser parser = new ResourcesParser();
+            parser.setParseType(ResourcesParser.ParseType.INFOSESSIONS);
+            
+            String apiKey = getString(R.string.api_key); // store your key in strings.xml
+            
+            // Step 2
+            String url = UWOpenDataAPI.buildURL(parser.getEndPoint(), apiKey);
+            
+            // Step 3
+            JSONDownloader downloader = new JSONDownloader(url);
+            downloader.setOnDownloadListener(this);
+            downloader.start(); // starts download in seperate thread
+        }
+    }
+    
+    ... 
+    
+      @Override
+    public void onDownloadFail(String givenURL, int index) {
+        // this method is called if the download fails (No internet connection, timeout, bad url, missing permission etc). 
+        Log.i(LOGCAT_TAG, "Download failed.. url = " + givenURL);
+    }
 
+    @Override
+    public void onDownloadComplete(APIResult apiResult) {
+        // Step 4
+        // parseJSON() will do different types of parsing depending on what ParseType you give it.
+        // Each Parser has their own ParseTypes
+        parser.setAPIResult(apiResult);
+        parser.parseJSON();
+        
+        // Step 5
+        ArrayList<InfoSession> sessions = parser.getInfoSessions();
+    }
+}
+```
 
 ### Examples
 #### Single Url
