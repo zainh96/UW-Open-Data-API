@@ -11,6 +11,7 @@ There are 5 general steps required to retrieve data:
 5. You can now request data from your parsers
 
 ## Android
+### Updating the Manifest
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest 
@@ -28,6 +29,7 @@ There are 5 general steps required to retrieve data:
     </application>
 </manifest>
 ```
+
 
 ### Examples
 #### Single Url
