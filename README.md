@@ -40,6 +40,15 @@ using one or more url at a time.
 * [/resources/infosessions](/Resources)
 * [/resources/goosewatch](/Resources)
 
+## Terms
+* [/terms/{term}/examschedule](/Terms)
+* [/terms/{term}/{subject}/schedule](/Terms)
+* [/terms/{term}/{subject}/{catalog_number}/schedule](/Terms)
+* [/terms/{term}/infosessions](/Terms)
+
+## Weather
+* [/weather/current](https://github.com/uWaterloo/api-documentation/blob/master/v2/weather/current.md)
+
 # Obtaining a Key
 You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
 
