@@ -64,7 +64,7 @@ public class Test extends JFrame implements JSONDownloader.onDownloadListener {
     // Step 1
     String apiKey = "MY_API_KEY";
     BuildingParser buildingParser = new BuildingParser();
-    ServerParser serParser = new ServerParser();
+    ServerParser serverParser = new ServerParser();
     
     String buildingUrl;
     String serverUrl;
