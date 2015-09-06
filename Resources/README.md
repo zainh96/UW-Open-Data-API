@@ -21,7 +21,7 @@ The table below shows which parse types correspond to which end point, and gette
 |`getAPIResult()`|`APIResult`|returns the apiResult associated with the instance of the parser|
 |`getMeta()`|`MetaData`|returns the Meta Data associated with the given APIResult|
 |`getEndPoint()`|String|returns the required end point string for building a URL|
-|`getParseTypes()`|ServerParser.ParseType[]|returns an array of all Parse Types for this parser|
+|`getParseType()`|`ResourcesParser.ParseType`|returns the parse type associated with this instance|
 |`getTutors()`|ArrayList of type `Tutor`|returns a list of tutors on campus|
 |`getPrinters()`|ArrayList of type `CampusPrinter`|returns a list of printers on campus|
 |`getInfoSessions()`|ArrayList of type `InfoSession`|returns a list of scheduled info sessions|
@@ -31,7 +31,7 @@ The table below shows which parse types correspond to which end point, and gette
 | Method Name  | Parameters | Description |
 | ------------- | ------------- | ------------- |
 |`setAPIResult(...)`| `APIResult` |Sets the apiResult object for this parser|
-|`setParseType(...)`| `ServerParser.ParseType` | sets the parse type for this parser |
+|`setParseType(...)`| `ResourcesParser.ParseType` | sets the parse type for this parser |
 
 ## Public Void Methods
 | Method Name  | Description |
