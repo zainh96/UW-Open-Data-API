@@ -54,6 +54,12 @@ using one or more url at a time.
 * [/news/{site}](/News)
 * [/news/{site}/{id}](/News)
 
+## Events
+* [/events](/Events)
+* [/events/{site}](/Events)
+* [/events/{site}/{id}](/Events)
+* [/events/holidays](/Events)
+
 # Obtaining a Key
 You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
 
