@@ -49,6 +49,11 @@ using one or more url at a time.
 ## Weather
 * [/weather/current](/Weather)
 
+## News
+* [/news](/News)
+* [/news/{site}](/News)
+* [/news/{site}/{id}](/News)
+
 # Obtaining a Key
 You need a valid API key to use this library. You can get one [here](https://api.uwaterloo.ca/).
 
