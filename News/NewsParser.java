@@ -7,8 +7,6 @@ import Core.UWParser;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.net.URL;
 import java.util.ArrayList;
 
 /**
@@ -136,6 +134,7 @@ public class NewsParser  extends UWParser {
             for(int i = 0; i < audienceArray.length(); i++){
                 audiences.add(audienceArray.getString(i));
             }
+            specificNewsItem.setAudience(audiences);
 
             JSONObject imageObject = newsObject.getJSONObject(IMAGE_TAG);
 
